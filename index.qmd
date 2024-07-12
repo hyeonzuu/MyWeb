@@ -1,12 +1,15 @@
 ---
-title: "About"
+title: "Hi"
 jupyter: python3
 ---
 
 This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## 홈페이지 첫 화면 입니다!
 
-```{python}
-1 + 1
-```
+
+안녕하세요. 송현주입니다.
+
+
+깃허브 보러가기  <https://github.com/hyeonzuu>
+
