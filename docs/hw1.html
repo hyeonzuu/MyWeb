@@ -20,10 +20,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -66,6 +100,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -96,6 +136,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./hw1.html" aria-current="page"> 
+<span class="menu-text">hw1</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -112,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#다음-표의-내용을-데이터" id="toc-다음-표의-내용을-데이터" class="nav-link active" data-scroll-target="#다음-표의-내용을-데이터">다음 표의 내용을 데이터</a></li>
+  <li><a href="#q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요." id="toc-q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요." class="nav-link active" data-scroll-target="#q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요.">Q1 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.</a></li>
   </ul>
 </nav>
     </div>
@@ -138,8 +182,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="다음-표의-내용을-데이터" class="level2">
-<h2 class="anchored" data-anchor-id="다음-표의-내용을-데이터">다음 표의 내용을 데이터</h2>
+<section id="q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요." class="level2">
+<h2 class="anchored" data-anchor-id="q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요.">Q1 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.</h2>
+<div id="b63aefc4" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'제품'</span> : [<span class="st">'사과'</span>, <span class="st">'딸기'</span>, <span class="st">'수박'</span>],</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'가격'</span> : [<span class="dv">1800</span>, <span class="dv">1500</span>, <span class="dv">3000</span>],</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'판매량'</span> : [<span class="dv">24</span>, <span class="dv">38</span>, <span class="dv">13</span>]})</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">제품</th>
+<th data-quarto-table-cell-role="th">가격</th>
+<th data-quarto-table-cell-role="th">판매량</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>사과</td>
+<td>1800</td>
+<td>24</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>딸기</td>
+<td>1500</td>
+<td>38</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>수박</td>
+<td>3000</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>import numpy as np p_mean = np.mean(df[‘가격’]) s_mean = np.mean(df[‘판매량’]) p_mean s_mean</p>
+<p>```</p>
 
 
 </section>

@@ -19,5 +19,19 @@
     "title": "Hi",
     "section": "홈페이지 첫 화면 입니다!",
     "text": "홈페이지 첫 화면 입니다!\n안녕하세요. 송현주입니다.\n깃허브 보러가기 https://github.com/hyeonzuu"
+  },
+  {
+    "objectID": "hw1.html",
+    "href": "hw1.html",
+    "title": "hw1",
+    "section": "",
+    "text": "import pandas as pd\ndf = pd.DataFrame({'제품' : ['사과', '딸기', '수박'],\n                    '가격' : [1800, 1500, 3000],\n                    '판매량' : [24, 38, 13]})\ndf\n\n\n\n\n\n\n\n\n제품\n가격\n판매량\n\n\n\n\n0\n사과\n1800\n24\n\n\n1\n딸기\n1500\n38\n\n\n2\n수박\n3000\n13\n\n\n\n\n\n\n\nimport numpy as np p_mean = np.mean(df[‘가격’]) s_mean = np.mean(df[‘판매량’]) p_mean s_mean\n```"
+  },
+  {
+    "objectID": "hw1.html#q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요.",
+    "href": "hw1.html#q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요.",
+    "title": "hw1",
+    "section": "",
+    "text": "import pandas as pd\ndf = pd.DataFrame({'제품' : ['사과', '딸기', '수박'],\n                    '가격' : [1800, 1500, 3000],\n                    '판매량' : [24, 38, 13]})\ndf\n\n\n\n\n\n\n\n\n제품\n가격\n판매량\n\n\n\n\n0\n사과\n1800\n24\n\n\n1\n딸기\n1500\n38\n\n\n2\n수박\n3000\n13\n\n\n\n\n\n\n\nimport numpy as np p_mean = np.mean(df[‘가격’]) s_mean = np.mean(df[‘판매량’]) p_mean s_mean\n```"
   }
 ]

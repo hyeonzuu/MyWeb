@@ -3,8 +3,24 @@ title: "hw1"
 jupyter: python3
 ---
 
-## 다음 표의 내용을 데이터 프레임
+## Q1 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.
 
 ```{python}
 
+import pandas as pd
+df = pd.DataFrame({'제품' : ['사과', '딸기', '수박'],
+                    '가격' : [1800, 1500, 3000],
+                    '판매량' : [24, 38, 13]})
+df
+
 ```
+
+
+import numpy as np
+p_mean = np.mean(df['가격'])
+s_mean = np.mean(df['판매량'])
+p_mean
+s_mean
+
+```
+
