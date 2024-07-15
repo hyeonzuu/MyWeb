@@ -1,0 +1,10 @@
+---
+title: "hw1"
+jupyter: python3
+---
+
+## 다음 표의 내용을 데이터 프레임
+
+```{python}
+
+```
