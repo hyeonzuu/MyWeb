@@ -1,9 +1,17 @@
 ---
 title: "Hi"
 jupyter: python3
+toc: false
+about:
+    id: hero-heading
+    template: jolla
+    image: 1.jpg
+    links:
+        - icon: github
+          text: github
+          href: https://github.com/hyeonzuu
 ---
 
-This is a Quarto website.
 
 ## 홈페이지 첫 화면 입니다!
 
@@ -11,5 +19,4 @@ This is a Quarto website.
 안녕하세요. 송현주입니다.
 
 
-깃허브 보러가기  <https://github.com/hyeonzuu>
 
