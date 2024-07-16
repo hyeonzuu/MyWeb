@@ -110,5 +110,33 @@
     "title": "hw1",
     "section": "Q5 large와 small에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요",
     "text": "Q5 large와 small에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요\n\ncount_grade = df['grade'].value_counts()\ncount_grade\ncount_grade.plot.bar(rot = 0)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "hw2.html#q1-자동차-배기량에-따라-고속도로-연비가-다른지-알아보려고-한다.-displ이-4이하인-자동차와-5이상인-자동차-중-어떤-자동차의-hwy-평균이-더-높은지-알아보세요",
+    "href": "hw2.html#q1-자동차-배기량에-따라-고속도로-연비가-다른지-알아보려고-한다.-displ이-4이하인-자동차와-5이상인-자동차-중-어떤-자동차의-hwy-평균이-더-높은지-알아보세요",
+    "title": "hw2",
+    "section": "Q1 자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 한다. displ이 4이하인 자동차와 5이상인 자동차 중 어떤 자동차의 hwy 평균이 더 높은지 알아보세요",
+    "text": "Q1 자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 한다. displ이 4이하인 자동차와 5이상인 자동차 중 어떤 자동차의 hwy 평균이 더 높은지 알아보세요\n\nimport numpy as np\nimport pandas as pd\n\ndf = pd.read_csv(\"./data/mpg.csv\")\ntop_displ = df.query('displ &gt;= 5')\nlow_displ = df.query('displ &lt;= 4')\ntop_displ['hwy'].mean()\nlow_displ['hwy'].mean()\n# displ &lt;= 4인 차량이  hwy가 높다\n\n25.96319018404908"
+  },
+  {
+    "objectID": "hw2.html#q2-자동차-제조-회사에-따라-도시-연비가-어떻게-다른지-알아보려고-합니다.-audi와-toyota-중-어느-manufacturer의-cty-평균이-높은지-알아보세요.",
+    "href": "hw2.html#q2-자동차-제조-회사에-따라-도시-연비가-어떻게-다른지-알아보려고-합니다.-audi와-toyota-중-어느-manufacturer의-cty-평균이-높은지-알아보세요.",
+    "title": "hw2",
+    "section": "Q2 자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. audi와 toyota 중 어느 manufacturer의 cty 평균이 높은지 알아보세요.",
+    "text": "Q2 자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. audi와 toyota 중 어느 manufacturer의 cty 평균이 높은지 알아보세요.\n\naudi = df.query('manufacturer == \"audi\"')\ntoyota = df.query('manufacturer== \"toyota\"')\naudi['cty'].mean()\ntoyota['cty'].mean()\n# cty는 toyota가 높다\n\n18.529411764705884"
+  },
+  {
+    "objectID": "hw2.html#q3-chevrolet-fold-honda-자동차의-고속도로-연비-평균을-알아보려-합니다.-세-회사의-데이터를-추출한-다음-hwy-전체-평균을-구해보세요.",
+    "href": "hw2.html#q3-chevrolet-fold-honda-자동차의-고속도로-연비-평균을-알아보려-합니다.-세-회사의-데이터를-추출한-다음-hwy-전체-평균을-구해보세요.",
+    "title": "hw2",
+    "section": "Q3 chevrolet, fold, honda 자동차의 고속도로 연비 평균을 알아보려 합니다. 세 회사의 데이터를 추출한 다음 hwy 전체 평균을 구해보세요.",
+    "text": "Q3 chevrolet, fold, honda 자동차의 고속도로 연비 평균을 알아보려 합니다. 세 회사의 데이터를 추출한 다음 hwy 전체 평균을 구해보세요.\n\nmpg_new = df.query('manufacturer in [\"chevrolet\", \"old\",\"honda\"]')\nmpg_new['hwy'].mean()\n\n25.321428571428573"
+  },
+  {
+    "objectID": "hw2.html#p-q1-audi에서-생산한-자동차-중에-어떤-자동차-모델의-hwy가-높은지-알아보려고-합니다.-audi-에서-생산한-자동차-중-hwy가-15위에-해당하는-자동차를-출력하세요.",
+    "href": "hw2.html#p-q1-audi에서-생산한-자동차-중에-어떤-자동차-모델의-hwy가-높은지-알아보려고-합니다.-audi-에서-생산한-자동차-중-hwy가-15위에-해당하는-자동차를-출력하세요.",
+    "title": "hw2",
+    "section": "2. 153p Q1 audi에서 생산한 자동차 중에 어떤 자동차 모델의 hwy가 높은지 알아보려고 합니다. audi 에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차를 출력하세요.",
+    "text": "2. 153p Q1 audi에서 생산한 자동차 중에 어떤 자동차 모델의 hwy가 높은지 알아보려고 합니다. audi 에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차를 출력하세요.\n\naudi = df.query('manufacturer == \"audi\"')\naudi.sort_values('hwy', ascending = False).head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n9\naudi\na4 quattro\n2.0\n2008\n4\nmanual(m6)\n4\n20\n28\np\ncompact"
   }
 ]
