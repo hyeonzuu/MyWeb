@@ -102,7 +102,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -136,6 +139,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="./hw1.html"> 
 <span class="menu-text">hw1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./hw2.html" aria-current="page"> 
+<span class="menu-text">hw2</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -188,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q1-자동차-배기량에-따라-고속도로-연비가-다른지-알아보려고-한다.-displ이-4이하인-자동차와-5이상인-자동차-중-어떤-자동차의-hwy-평균이-더-높은지-알아보세요" class="level2">
 <h2 class="anchored" data-anchor-id="q1-자동차-배기량에-따라-고속도로-연비가-다른지-알아보려고-한다.-displ이-4이하인-자동차와-5이상인-자동차-중-어떤-자동차의-hwy-평균이-더-높은지-알아보세요">Q1 자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 한다. displ이 4이하인 자동차와 5이상인 자동차 중 어떤 자동차의 hwy 평균이 더 높은지 알아보세요</h2>
-<div id="d6cc9046" class="cell" data-execution_count="1">
+<div id="43958f4e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -198,40 +205,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>top_displ[<span class="st">'hwy'</span>].mean()</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>low_displ[<span class="st">'hwy'</span>].mean()</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># displ &lt;= 4인 차량이  hwy가 높다</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>25.96319018404908</code></pre>
 </div>
 </div>
 </section>
 <section id="q2-자동차-제조-회사에-따라-도시-연비가-어떻게-다른지-알아보려고-합니다.-audi와-toyota-중-어느-manufacturer의-cty-평균이-높은지-알아보세요." class="level2">
 <h2 class="anchored" data-anchor-id="q2-자동차-제조-회사에-따라-도시-연비가-어떻게-다른지-알아보려고-합니다.-audi와-toyota-중-어느-manufacturer의-cty-평균이-높은지-알아보세요.">Q2 자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. audi와 toyota 중 어느 manufacturer의 cty 평균이 높은지 알아보세요.</h2>
-<div id="0ea4f789" class="cell" data-execution_count="2">
+<div id="17edb0b1" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>audi <span class="op">=</span> df.query(<span class="st">'manufacturer == "audi"'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>toyota <span class="op">=</span> df.query(<span class="st">'manufacturer== "toyota"'</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>audi[<span class="st">'cty'</span>].mean()</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>toyota[<span class="st">'cty'</span>].mean()</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># cty는 toyota가 높다</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>18.529411764705884</code></pre>
 </div>
 </div>
 </section>
 <section id="q3-chevrolet-fold-honda-자동차의-고속도로-연비-평균을-알아보려-합니다.-세-회사의-데이터를-추출한-다음-hwy-전체-평균을-구해보세요." class="level2">
 <h2 class="anchored" data-anchor-id="q3-chevrolet-fold-honda-자동차의-고속도로-연비-평균을-알아보려-합니다.-세-회사의-데이터를-추출한-다음-hwy-전체-평균을-구해보세요.">Q3 chevrolet, fold, honda 자동차의 고속도로 연비 평균을 알아보려 합니다. 세 회사의 데이터를 추출한 다음 hwy 전체 평균을 구해보세요.</h2>
-<div id="fca7bc2a" class="cell" data-execution_count="3">
+<div id="d39e3065" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mpg_new <span class="op">=</span> df.query(<span class="st">'manufacturer in ["chevrolet", "old","honda"]'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mpg_new[<span class="st">'hwy'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>25.321428571428573</code></pre>
 </div>
 </div>
 </section>
 <section id="p-q1-audi에서-생산한-자동차-중에-어떤-자동차-모델의-hwy가-높은지-알아보려고-합니다.-audi-에서-생산한-자동차-중-hwy가-15위에-해당하는-자동차를-출력하세요." class="level2">
 <h2 class="anchored" data-anchor-id="p-q1-audi에서-생산한-자동차-중에-어떤-자동차-모델의-hwy가-높은지-알아보려고-합니다.-audi-에서-생산한-자동차-중-hwy가-15위에-해당하는-자동차를-출력하세요.">2. 153p Q1 audi에서 생산한 자동차 중에 어떤 자동차 모델의 hwy가 높은지 알아보려고 합니다. audi 에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차를 출력하세요.</h2>
-<div id="6713fb11" class="cell" data-execution_count="4">
+<div id="18e9f0d2" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>audi <span class="op">=</span> df.query(<span class="st">'manufacturer == "audi"'</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>audi.sort_values(<span class="st">'hwy'</span>, ascending <span class="op">=</span> <span class="va">False</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
 
