@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="송현주">
-<meta name="dcterms.date" content="2018-12-07">
+<meta name="dcterms.date" content="2024-07-17">
 
 <title>hw1 – Hyun zuu</title>
 <style>
@@ -104,17 +104,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
+
 <link rel="stylesheet" href="../../styles.css">
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -156,7 +158,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">hw1</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">bigdata</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>송현주 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 17, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -179,45 +212,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">hw1</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">bigdata</div>
-  </div>
-  </div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>송현주 </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 7, 2018</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="p-q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요." class="level2">
 <h2 class="anchored" data-anchor-id="p-q1-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요.">84p Q1 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.</h2>
-<div id="e456a661" class="cell" data-execution_count="1">
+<div id="20d97031" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'제품'</span> : [<span class="st">'사과'</span>, <span class="st">'딸기'</span>, <span class="st">'수박'</span>],</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'가격'</span> : [<span class="dv">1800</span>, <span class="dv">1500</span>, <span class="dv">3000</span>],</span>
@@ -261,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="fe636e2e" class="cell" data-execution_count="2">
+<div id="8857bc95" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>p_mean <span class="op">=</span> np.mean(df[<span class="st">'가격'</span>])</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>s_mean <span class="op">=</span> np.mean(df[<span class="st">'판매량'</span>])</span>
@@ -277,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q1-mpg-데이터를-불러와-복사본을-만드세요" class="level2">
 <h2 class="anchored" data-anchor-id="q1-mpg-데이터를-불러와-복사본을-만드세요">Q1 mpg 데이터를 불러와 복사본을 만드세요</h2>
-<div id="3dda98f4" class="cell" data-execution_count="3">
+<div id="7e9a05e0" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/mpg.csv'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df_new <span class="op">=</span> df.copy()</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -467,14 +470,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q2-복사본-데이터를-이용해-cty는-city로-hwy는-highway로-바꾸세요" class="level2">
 <h2 class="anchored" data-anchor-id="q2-복사본-데이터를-이용해-cty는-city로-hwy는-highway로-바꾸세요">Q2 복사본 데이터를 이용해 cty는 city로 hwy는 highway로 바꾸세요</h2>
-<div id="4d06e2ac" class="cell" data-execution_count="4">
+<div id="86310480" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_new <span class="op">=</span> df_new.rename(columns <span class="op">=</span> {<span class="st">'cty'</span> :<span class="st">'city'</span>}) </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df_new <span class="op">=</span> df_new.rename(columns <span class="op">=</span> {<span class="st">'hwy'</span> :<span class="st">'highway'</span>}) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="q3-데이터-일부를-출력해-변수명이-바뀌었는지-확인해보세요" class="level2">
 <h2 class="anchored" data-anchor-id="q3-데이터-일부를-출력해-변수명이-바뀌었는지-확인해보세요">Q3 데이터 일부를 출력해 변수명이 바뀌었는지 확인해보세요</h2>
-<div id="0a7c29ea" class="cell" data-execution_count="5">
+<div id="59f45652" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_new.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
@@ -580,7 +583,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q1-데이터를-불러와-데이터-특징-파악" class="level2">
 <h2 class="anchored" data-anchor-id="q1-데이터를-불러와-데이터-특징-파악">Q1 데이터를 불러와 데이터 특징 파악</h2>
-<div id="5323cff0" class="cell" data-execution_count="6">
+<div id="50cf510b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/midwest.csv'</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'poptotal'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -602,7 +605,7 @@ Name: poptotal, Length: 437, dtype: int64</code></pre>
 </section>
 <section id="q2-poptotal전체-인구변수를-total로-popasian아시아-인구-변수를-asian으로-수정하세요" class="level2">
 <h2 class="anchored" data-anchor-id="q2-poptotal전체-인구변수를-total로-popasian아시아-인구-변수를-asian으로-수정하세요">Q2 poptotal(전체 인구)변수를 total로 popasian(아시아 인구) 변수를 asian으로 수정하세요</h2>
-<div id="95da348d" class="cell" data-execution_count="7">
+<div id="441141d6" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.rename(columns <span class="op">=</span> {<span class="st">'poptotal'</span> : <span class="st">'total'</span>})</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.rename(columns <span class="op">=</span> {<span class="st">'popasian'</span> : <span class="st">'asian'</span>})</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df.head()</span>
@@ -620,7 +623,7 @@ Name: poptotal, Length: 437, dtype: int64</code></pre>
 </section>
 <section id="q3-total-asian-변수를-이용해-전체-인구-대비-아시아-인구-백분율-파생변수를-추가하는-히스토그램을-만들어-분포를-살펴보세요" class="level2">
 <h2 class="anchored" data-anchor-id="q3-total-asian-변수를-이용해-전체-인구-대비-아시아-인구-백분율-파생변수를-추가하는-히스토그램을-만들어-분포를-살펴보세요">Q3 total, asian 변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하는 히스토그램을 만들어 분포를 살펴보세요</h2>
-<div id="12970e32" class="cell" data-execution_count="8">
+<div id="4055ee03" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'asian%'</span>] <span class="op">=</span> df[<span class="st">'asian'</span>] <span class="op">/</span> df[<span class="st">'total'</span>] <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'asian%'</span>].plot.hist()</span>
@@ -640,7 +643,7 @@ Name: poptotal, Length: 437, dtype: int64</code></pre>
 </section>
 <section id="q4-아시아-인구-백분율-전체-평균을-구하고-평균을-초과하면-large-그외에는-small을-부여한-파생변수를-만드세요" class="level2">
 <h2 class="anchored" data-anchor-id="q4-아시아-인구-백분율-전체-평균을-구하고-평균을-초과하면-large-그외에는-small을-부여한-파생변수를-만드세요">Q4 아시아 인구 백분율 전체 평균을 구하고 평균을 초과하면 ‘large’, 그외에는 ’small’을 부여한 파생변수를 만드세요</h2>
-<div id="853bbc42" class="cell" data-execution_count="9">
+<div id="493f718d" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>asian_mean <span class="op">=</span> df[<span class="st">'asian%'</span>].mean()</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'grade'</span>] <span class="op">=</span> np.where(df[<span class="st">'asian%'</span>] <span class="op">&gt;</span> asian_mean, <span class="st">'large'</span>, <span class="st">'small'</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -950,7 +953,7 @@ Name: poptotal, Length: 437, dtype: int64</code></pre>
 </section>
 <section id="q5-large와-small에-해당하는-지역이-얼마나-많은지-빈도표와-빈도-막대-그래프를-만들어-확인해-보세요" class="level2">
 <h2 class="anchored" data-anchor-id="q5-large와-small에-해당하는-지역이-얼마나-많은지-빈도표와-빈도-막대-그래프를-만들어-확인해-보세요">Q5 large와 small에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요</h2>
-<div id="79ed6d21" class="cell" data-execution_count="10">
+<div id="a57a8e2e" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>count_grade <span class="op">=</span> df[<span class="st">'grade'</span>].value_counts()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>count_grade</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>count_grade.plot.bar(rot <span class="op">=</span> <span class="dv">0</span>)</span>

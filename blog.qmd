@@ -1,8 +1,8 @@
 ---
-title: "myblog"
+title: "my blog"
 listing:
   contents: posts
-  sort: "date desc"
+  sort: "date desc" # 내림차순 정렬
   type: default
   categories: true
 ---
