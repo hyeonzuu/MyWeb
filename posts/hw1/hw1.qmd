@@ -1,5 +1,8 @@
 ---
 title: "hw1"
+author: "송현주"
+date: "24-07-17"
+categories: [bigdata]
 jupyter: python3
 ---
 
@@ -31,7 +34,7 @@ s_mean
 
 ```{python}
 
-df = pd.read_csv('./data/mpg.csv')
+df = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/mpg.csv')
 df_new = df.copy()
 df
 
@@ -57,7 +60,7 @@ df_new.head()
 ## Q1 데이터를 불러와 데이터 특징 파악
 
 ```{python}
-df = pd.read_csv('./data/midwest.csv')
+df = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/midwest.csv')
 df
 df['poptotal']
 

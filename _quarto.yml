@@ -8,9 +8,11 @@ website:
     left:
       - href: index.qmd #qnd 하나하나가 페이지
         text: Home
-      - about.qmd
-      - hw1.qmd
-      - hw2.qmd
+      - href: about.qmd
+      - href: hw1.qmd
+      - href: hw2.qmd
+      - href: blog.qmd
+        text: Blog
 
 format:
   html:
