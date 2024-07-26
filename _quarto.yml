@@ -9,8 +9,6 @@ website:
       - href: index.qmd #qnd 하나하나가 페이지
         text: Home
       - href: about.qmd
-      - href: hw1.qmd
-      - href: hw2.qmd
       - href: blog.qmd
         text: Blog
 

@@ -1,0 +1,62 @@
+---
+title: "hw3"
+author: "송현주"
+date: "2024-07-22"
+categories: [bigdata]
+jupyter: python3
+---
+
+## 1. plotly
+
+```{python}
+
+import pandas as pd
+mpg = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/mpg.csv")
+
+
+```
+
+```{python}
+# 산점도 만들기
+import plotly.express as px
+px.scatter(data_frame = mpg, x = "cty", y = "hwy", color = "drv")
+
+```
+```{python}
+df = mpg.groupby('category', as_index = False)\
+        .agg(n =('category', 'count'))
+        
+df
+px.bar(data_frame = df, x = 'category', y = 'n', color = 'category')
+
+```
+```{python}
+import plotly.express as px
+px.line(data_frame = mpg, x = "cty", y = "hwy", color = "drv")
+
+```
+
+
+## HW1
+### 1-1. mpg 데이터의 cty와 hwy 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어보세요
+
+```{python}
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.scatterplot(data = mpg, x = "cty", y = "hwy", hue = "drv")
+plt.show()
+plt.clf()
+```
+
+### 1-2. x축은 poptotal, y축은 popasian으로된 산점도를 만드세요. 전체 인구는 50만명 이하 아시안인구는 1만명 이하인 지역만 산점도에 표시되게 설정해주세요.
+
+```{python}
+midwest = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/midwest.csv")
+
+sns.scatterplot(data = midwest, x = "poptotal", y = "popasian") \
+    .set(xlim = [:, 500000], ylim = [:, 10000])
+plt.show()
+plt.clf()
+
+```
+

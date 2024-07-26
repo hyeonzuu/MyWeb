@@ -1,0 +1,62 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"hw3\"\n",
+        "jupyter: python3\n",
+        "---"
+      ],
+      "id": "d9ed5bdc"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as pd\n",
+        "import seaborn as sns\n",
+        "import matplotlib.pyplot as plt\n",
+        "import plotly.express as px\n",
+        "\n",
+        "mpg = pd.read_csv(\"data/mpg.csv\")\n",
+        "\n",
+        "df_mpg = mpg.groupby(\"drv\", as_index = False) \\\n",
+        "            .agg(n = (\"drv\", \"count\"))\n",
+        "\n",
+        "sns.barplot(data = df_mpg, x = \"drv\", y =\"n\")\n",
+        "plt.show()\n",
+        "plt.clf()\n",
+        "\n",
+        "sns.countplot(data = mpg, x = \"drv\")\n",
+        "\n",
+        "plt.show()\n",
+        "plt.clf()"
+      ],
+      "id": "f5f1f56e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "px.scatter(data_frame = mpg,\n",
+        "            x = \")"
+      ],
+      "id": "92b4fd84",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

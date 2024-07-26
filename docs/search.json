@@ -142,9 +142,9 @@
   {
     "objectID": "blog.html",
     "href": "blog.html",
-    "title": "myblog",
+    "title": "my blog",
     "section": "",
-    "text": "hw1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n송현주\n\n\n\n\n\n\nNo matching items"
+    "text": "hw3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n송현주\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "post/hw1/hw1.html",
@@ -341,5 +341,61 @@
     "title": "hw2",
     "section": "2. 153p Q1 audi에서 생산한 자동차 중에 어떤 자동차 모델의 hwy가 높은지 알아보려고 합니다. audi 에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차를 출력하세요.",
     "text": "2. 153p Q1 audi에서 생산한 자동차 중에 어떤 자동차 모델의 hwy가 높은지 알아보려고 합니다. audi 에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차를 출력하세요.\n\naudi = df.query('manufacturer == \"audi\"')\naudi.sort_values('hwy', ascending = False).head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n9\naudi\na4 quattro\n2.0\n2008\n4\nmanual(m6)\n4\n20\n28\np\ncompact"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html",
+    "href": "posts/hw3/hw3.html",
+    "title": "hw3",
+    "section": "",
+    "text": "import pandas as pd\nmpg = pd.read_csv(\"C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/mpg.csv\")\n\n\n# 산점도 만들기\nimport plotly.express as px\npx.scatter(data_frame = mpg, x = \"cty\", y = \"hwy\", color = \"drv\")\n\n                                                \n\n\n\ndf = mpg.groupby('category', as_index = False)\\\n        .agg(n =('category', 'count'))\n        \ndf\npx.bar(data_frame = df, x = 'category', y = 'n', color = 'category')\n\n                                                \n\n\n\nimport plotly.express as px\npx.line(data_frame = mpg, x = \"cty\", y = \"hwy\", color = \"drv\")"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html#plotly",
+    "href": "posts/hw3/hw3.html#plotly",
+    "title": "hw3",
+    "section": "",
+    "text": "import pandas as pd\nmpg = pd.read_csv(\"C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/mpg.csv\")\n\n\n# 산점도 만들기\nimport plotly.express as px\npx.scatter(data_frame = mpg, x = \"cty\", y = \"hwy\", color = \"drv\")\n\n                                                \n\n\n\ndf = mpg.groupby('category', as_index = False)\\\n        .agg(n =('category', 'count'))\n        \ndf\npx.bar(data_frame = df, x = 'category', y = 'n', color = 'category')\n\n                                                \n\n\n\nimport plotly.express as px\npx.line(data_frame = mpg, x = \"cty\", y = \"hwy\", color = \"drv\")"
+  },
+  {
+    "objectID": "posts/hw3/hw3.html#hw1",
+    "href": "posts/hw3/hw3.html#hw1",
+    "title": "hw3",
+    "section": "HW1",
+    "text": "HW1\n\n1-1. mpg 데이터의 cty와 hwy 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어보세요\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nsns.scatterplot(data = mpg, x = \"cty\", y = \"hwy\", hue = \"drv\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n1-2. x축은 poptotal, y축은 popasian으로된 산점도를 만드세요. 전체 인구는 50만명 이하 아시안인구는 1만명 이하인 지역만 산점도에 표시되게 설정해주세요.\n\nmidwest = pd.read_csv(\"C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/midwest.csv\")\n\nsns.scatterplot(data = midwest, x = \"poptotal\", y = \"popasian\") \\\n    #.set(xlim = [:, 50], ylim = [:, 10000])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/hw4.html",
+    "href": "posts/hw4/hw4.html",
+    "title": "hw4",
+    "section": "",
+    "text": "from scipy.stats import binom\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport math\n\n# loc = 3, scale = 2\ndef f(x):\n    return (1 / (2 * np.sqrt(2 * math.pi))) * np.exp(-0.5 * ((x - 3) / 2) ** 2)\n\nx = np.linspace(-3, 3, 100)\nplt.plot(x, f(x))\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/hw4.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2-의-pdf를-그릴-것.",
+    "href": "posts/hw4/hw4.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2-의-pdf를-그릴-것.",
+    "title": "hw4",
+    "section": "",
+    "text": "from scipy.stats import binom\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport math\n\n# loc = 3, scale = 2\ndef f(x):\n    return (1 / (2 * np.sqrt(2 * math.pi))) * np.exp(-0.5 * ((x - 3) / 2) ** 2)\n\nx = np.linspace(-3, 3, 100)\nplt.plot(x, f(x))\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/hw4.html#x-n2-32",
+    "href": "posts/hw4/hw4.html#x-n2-32",
+    "title": "hw4",
+    "section": "X ~ N(2, 3^2)",
+    "text": "X ~ N(2, 3^2)\n\nP(X &lt; 3)\n\n\nfrom scipy.stats import norm\nnorm.cdf(2, loc = 2, scale=3)\n\n0.5\n\n\n\nP(2 &lt; X &lt; 5)\n\n\n0.5 - norm.cdf(-1, 2, 3)\n\n0.3413447460685429\n\n\n\nP(X &lt; 3 or X &gt; 7)\n\n\nnorm.cdf(3, loc=2, scale=3) + (1 - norm.cdf(7, loc=2, scale=3))\n\n0.678349012091051"
+  },
+  {
+    "objectID": "posts/hw4/hw4.html#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는",
+    "href": "posts/hw4/hw4.html#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는",
+    "title": "hw4",
+    "section": "3. LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?",
+    "text": "3. LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?\n\n# loc = 30, scale = 2^2\n\nnorm.ppf(0.95, 30, 2)\n\n33.28970725390295"
+  },
+  {
+    "objectID": "posts/hw4/hw4.html#파이썬-scipy-패키지-사용해서-다음과-같은-확률을-구하시오.",
+    "href": "posts/hw4/hw4.html#파이썬-scipy-패키지-사용해서-다음과-같은-확률을-구하시오.",
+    "title": "hw4",
+    "section": "2. 파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오.",
+    "text": "2. 파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오."
   }
 ]
