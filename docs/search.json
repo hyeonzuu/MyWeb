@@ -144,7 +144,7 @@
     "href": "blog.html",
     "title": "my blog",
     "section": "",
-    "text": "hw3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n송현주\n\n\n\n\n\n\nNo matching items"
+    "text": "hw4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n송현주\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n송현주\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "post/hw1/hw1.html",
@@ -397,5 +397,19 @@
     "title": "hw4",
     "section": "2. 파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오.",
     "text": "2. 파이썬 scipy 패키지 사용해서 다음과 같은 확률을 구하시오."
+  },
+  {
+    "objectID": "posts/hw5/hw5.html",
+    "href": "posts/hw5/hw5.html",
+    "title": "hw4",
+    "section": "",
+    "text": "##균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.\n\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport seaborn as sns\nfrom scipy.stats import uniform\n\n\n\n\n\nx = uniform.rvs(3, 7, 20*10010).reshape(-1, 20)\n\n\n\n\ns_2\n\ns_2 = x.var(axis=1, ddof=1)\nsns.histplot(s_2, stat=\"density\")\nplt.axvline(x=np.var(x), color='green', linestyle='-', linewidth=1)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nk_2\n\nk_2 = x.var(axis=1, ddof=0)\nsns.histplot(k_2, stat=\"density\")\nplt.axvline(x=np.var(x), color='green', linestyle='-', linewidth=1)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n진짜 모르겠다다"
+  },
+  {
+    "objectID": "posts/hw5/hw5.html#표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.",
+    "href": "posts/hw5/hw5.html#표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.",
+    "title": "hw4",
+    "section": "",
+    "text": "##균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.\n\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport seaborn as sns\nfrom scipy.stats import uniform\n\n\n\n\n\nx = uniform.rvs(3, 7, 20*10010).reshape(-1, 20)\n\n\n\n\ns_2\n\ns_2 = x.var(axis=1, ddof=1)\nsns.histplot(s_2, stat=\"density\")\nplt.axvline(x=np.var(x), color='green', linestyle='-', linewidth=1)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nk_2\n\nk_2 = x.var(axis=1, ddof=0)\nsns.histplot(k_2, stat=\"density\")\nplt.axvline(x=np.var(x), color='green', linestyle='-', linewidth=1)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n진짜 모르겠다다"
   }
 ]
