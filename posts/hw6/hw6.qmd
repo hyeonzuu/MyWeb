@@ -1,0 +1,102 @@
+---
+title: "hw6"
+author: "송현주"
+date: "2024-07-30"
+categories: [bigdata]
+jupyter: python3
+---
+
+##  아래 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기 위아래  수직 막대기로 표기
+### 패키지 불러오기
+
+```{python}
+
+import pandas as pd
+import numpy as np
+import seaborn as snss
+import matplotlib.pyplot as plt
+
+
+```
+
+### 실습 코드
+
+```{python}
+
+welfare = pd.read_spss("C:/Users/USER/Documents/LS빅데이터스쿨/LSBigdata_Project1/data/Koweps_hpwc14_2019_beta2.sav")
+
+
+# 복사본 만들기
+raw_welfare = pd.DataFrame(welfare)
+
+welfare = raw_welfare.copy()
+
+welfare.shape
+welfare.info()
+welfare.describe()
+
+# rename
+welfare = welfare.rename(
+    columns={"h14_g3": "sex",
+            "h14_g4": "birth",
+            "h14_g10": "marriage_type",
+            "h14_g11": "religion",
+            "p1402_8aq1": "income",
+            "h14_eco9": "code_job",
+            "h14_reg7": "code_region" })
+
+welfare = welfare[["sex", "birth", "marriage_type", "religion", "income", "code_job", "code_region"]]
+
+welfare.shape
+
+welfare["sex"] = np.where(welfare["sex"] == 1, "male", "female")
+welfare["sex"].value_counts()
+
+
+welfare["income"].dtypes
+welfare["income"].describe()
+welfare["income"].isna().sum()
+
+
+sex_income = welfare.dropna(subset=["income"]) \
+                    .groupby("sex", as_index=False) \
+                    .agg(mean_income=("income", "mean"),
+                         std_income=("income", "std"),
+                         count_income=("income", "count"))
+
+
+sns.barplot(data = sex_income, x = "sex", y = "mean_income", hue = "sex")
+plt.show()
+plt.clf()
+```
+
+## 신뢰구간 구하기
+
+```{python}
+
+import scipy.stats as stats
+
+sex_income['ci_lower'] = sex_income['mean_income'] - 1.96 * (sex_income['std_income'] / np.sqrt(sex_income['count_income']))
+sex_income['ci_lower']
+sex_income['ci_upper'] = sex_income['mean_income'] + 1.96* (sex_income['std_income'] / np.sqrt(sex_income['count_income']))
+sex_income['ci_upper']
+
+```
+
+
+### 그래프 그리기
+
+```{python}
+# 그래프 그리기
+sns.barplot(data=welfare, x='sex', y='income', errorbar=('ci', 95), hue='sex')
+plt.xlabel('Sex')
+plt.ylabel('mean_income')
+plt.show()
+plt.clf()
+
+```
+
+
+
+
+
