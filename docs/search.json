@@ -368,21 +368,21 @@
     "href": "posts/hw4/hw4.html",
     "title": "hw4",
     "section": "",
-    "text": "from scipy.stats import binom\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport math\n\n# loc = 3, scale = 2\ndef f(x):\n    return (1 / (2 * np.sqrt(2 * math.pi))) * np.exp(-0.5 * ((x - 3) / 2) ** 2)\n\nx = np.linspace(-3, 3, 100)\nplt.plot(x, f(x))\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "from scipy.stats import binom\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport math\n\n# loc = 3, scale = 2\ndef f(x):\n    return (1 / (2 * np.sqrt(2 * math.pi))) * np.exp(-0.5 * ((x - 3) / 2) ** 2)\n\nx = np.linspace(0, 6, 100)\nplt.plot(x, f(x))\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/hw4/hw4.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2-의-pdf를-그릴-것.",
     "href": "posts/hw4/hw4.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2-의-pdf를-그릴-것.",
     "title": "hw4",
     "section": "",
-    "text": "from scipy.stats import binom\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport math\n\n# loc = 3, scale = 2\ndef f(x):\n    return (1 / (2 * np.sqrt(2 * math.pi))) * np.exp(-0.5 * ((x - 3) / 2) ** 2)\n\nx = np.linspace(-3, 3, 100)\nplt.plot(x, f(x))\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "from scipy.stats import binom\nimport numpy as np\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport math\n\n# loc = 3, scale = 2\ndef f(x):\n    return (1 / (2 * np.sqrt(2 * math.pi))) * np.exp(-0.5 * ((x - 3) / 2) ** 2)\n\nx = np.linspace(0, 6, 100)\nplt.plot(x, f(x))\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/hw4/hw4.html#x-n2-32",
     "href": "posts/hw4/hw4.html#x-n2-32",
     "title": "hw4",
     "section": "X ~ N(2, 3^2)",
-    "text": "X ~ N(2, 3^2)\n\nP(X &lt; 3)\n\n\nfrom scipy.stats import norm\nnorm.cdf(2, loc = 2, scale=3)\n\n0.5\n\n\n\nP(2 &lt; X &lt; 5)\n\n\n0.5 - norm.cdf(-1, 2, 3)\n\n0.3413447460685429\n\n\n\nP(X &lt; 3 or X &gt; 7)\n\n\nnorm.cdf(3, loc=2, scale=3) + (1 - norm.cdf(7, loc=2, scale=3))\n\n0.678349012091051"
+    "text": "X ~ N(2, 3^2)\n\nP(X &lt; 3)\n\n\nfrom scipy.stats import norm\nnorm.cdf(3, loc = 2, scale=3)\n\n0.6305586598182363\n\n\n\nP(2 &lt; X &lt; 5)\n\n\n0.5 - norm.cdf(-1, 2, 3)\n\n0.3413447460685429\n\n\n\nP(X &lt; 3 or X &gt; 7)\n\n\nnorm.cdf(3, loc=2, scale=3) + (1 - norm.cdf(7, loc=2, scale=3))\n\n0.678349012091051"
   },
   {
     "objectID": "posts/hw4/hw4.html#ls-빅데이터-스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는",
