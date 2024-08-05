@@ -50,6 +50,8 @@ p_value = norm.cdf(x_bar, loc=16, scale=(x_std / np.sqrt(15)))
 ```
 ### 6. 현대자동차의 신형 모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.
 ```{python}
+from scipy.stats import t
+
 se = np.std(x, ddof=1) / np.sqrt(n)
 round(x_bar - t.ppf(0.975, n-1) * se, 3)
 round(x_bar + t.ppf(0.975, n-1) * se, 3)
