@@ -15,11 +15,10 @@
         "\n",
         "\n",
         "\n",
-        "\n",
         "##  아래 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기 위아래  수직 막대기로 표기\n",
         "### 패키지 불러오기\n"
       ],
-      "id": "41d8966d"
+      "id": "4be51d8b"
     },
     {
       "cell_type": "code",
@@ -30,7 +29,7 @@
         "import seaborn as snss\n",
         "import matplotlib.pyplot as plt\n"
       ],
-      "id": "b636492b",
+      "id": "569e75c3",
       "execution_count": null,
       "outputs": []
     },
@@ -40,7 +39,7 @@
       "source": [
         "### 실습 코드\n"
       ],
-      "id": "cb558c10"
+      "id": "32de45da"
     },
     {
       "cell_type": "code",
@@ -92,7 +91,7 @@
         "plt.show()\n",
         "plt.clf()"
       ],
-      "id": "b8c3ffda",
+      "id": "61905ffe",
       "execution_count": null,
       "outputs": []
     },
@@ -102,7 +101,7 @@
       "source": [
         "## 신뢰구간 구하기\n"
       ],
-      "id": "39ac60b4"
+      "id": "610e5971"
     },
     {
       "cell_type": "code",
@@ -115,7 +114,7 @@
         "sex_income['ci_upper'] = sex_income['mean_income'] + 1.96* (sex_income['std_income'] / np.sqrt(sex_income['count_income']))\n",
         "sex_income['ci_upper']"
       ],
-      "id": "f78c4026",
+      "id": "4b322b39",
       "execution_count": null,
       "outputs": []
     },
@@ -125,7 +124,7 @@
       "source": [
         "### 그래프 그리기\n"
       ],
-      "id": "8e4ebb60"
+      "id": "43242c51"
     },
     {
       "cell_type": "code",
@@ -138,7 +137,7 @@
         "plt.show()\n",
         "plt.clf()"
       ],
-      "id": "a799e949",
+      "id": "2df1b81d",
       "execution_count": null,
       "outputs": []
     }
