@@ -1,0 +1,126 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"hw3\"\n",
+        "author: \"송현주\"\n",
+        "date: \"2024-07-22\"\n",
+        "categories: [bigdata]\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## 1. plotly\n"
+      ],
+      "id": "df02bd38"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as pd\n",
+        "mpg = pd.read_csv(\"C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/mpg.csv\")\n"
+      ],
+      "id": "df7f71cb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# 산점도 만들기\n",
+        "import plotly.express as px\n",
+        "px.scatter(data_frame = mpg, x = \"cty\", y = \"hwy\", color = \"drv\")"
+      ],
+      "id": "fee1e52e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = mpg.groupby('category', as_index = False)\\\n",
+        "        .agg(n =('category', 'count'))\n",
+        "        \n",
+        "df\n",
+        "px.bar(data_frame = df, x = 'category', y = 'n', color = 'category')"
+      ],
+      "id": "bbd641f5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import plotly.express as px\n",
+        "px.line(data_frame = mpg, x = \"cty\", y = \"hwy\", color = \"drv\")"
+      ],
+      "id": "ea160cfb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## HW1\n",
+        "\n",
+        "### 1-1. mpg 데이터의 cty와 hwy 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어보세요\n"
+      ],
+      "id": "b5af41c4"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import seaborn as sns\n",
+        "sns.scatterplot(data = mpg, x = \"cty\", y = \"hwy\", hue = \"drv\")\n",
+        "plt.show()\n",
+        "plt.clf()"
+      ],
+      "id": "d28cd801",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### 1-2. x축은 poptotal, y축은 popasian으로된 산점도를 만드세요. 전체 인구는 50만명 이하 아시안인구는 1만명 이하인 지역만 산점도에 표시되게 설정해주세요.\n"
+      ],
+      "id": "f3549bb8"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "midwest = pd.read_csv(\"C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/midwest.csv\")\n",
+        "\n",
+        "sns.scatterplot(data=midwest, x=\"poptotal\", y=\"popasian\") \\\n",
+        "    .set(xlim=(0, 500000), ylim=(0, 10000))\n",
+        "plt.show()\n",
+        "plt.clf()"
+      ],
+      "id": "c04af7c2",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\USER\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

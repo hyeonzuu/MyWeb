@@ -22,6 +22,7 @@ import plotly.express as px
 px.scatter(data_frame = mpg, x = "cty", y = "hwy", color = "drv")
 
 ```
+
 ```{python}
 df = mpg.groupby('category', as_index = False)\
         .agg(n =('category', 'count'))
@@ -30,14 +31,15 @@ df
 px.bar(data_frame = df, x = 'category', y = 'n', color = 'category')
 
 ```
+
 ```{python}
 import plotly.express as px
 px.line(data_frame = mpg, x = "cty", y = "hwy", color = "drv")
 
 ```
 
-
 ## HW1
+
 ### 1-1. mpg 데이터의 cty와 hwy 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어보세요
 
 ```{python}
@@ -53,10 +55,9 @@ plt.clf()
 ```{python}
 midwest = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/MyWeb/data/midwest.csv")
 
-sns.scatterplot(data = midwest, x = "poptotal", y = "popasian") \
-    .set(xlim = [:, 500000], ylim = [:, 10000])
+sns.scatterplot(data=midwest, x="poptotal", y="popasian") \
+    .set(xlim=(0, 500000), ylim=(0, 10000))
 plt.show()
 plt.clf()
 
 ```
-

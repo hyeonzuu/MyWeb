@@ -7,9 +7,11 @@ jupyter: python3
 ---
 
 ## 표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다.
+
 ##균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.
 
-### 패키지 불러오기 
+### 패키지 불러오기
+
 ```{python}
 import matplotlib.pyplot as plt
 import numpy as np
@@ -24,9 +26,10 @@ x = uniform.rvs(3, 7, 20*10010).reshape(-1, 20)
 
 ```
 
-
 ### 1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요!
+
 s_2
+
 ```{python}
 
 s_2 = x.var(axis=1, ddof=1)
@@ -38,6 +41,7 @@ plt.clf()
 ```
 
 k_2
+
 ```{python}
 k_2 = x.var(axis=1, ddof=0)
 sns.histplot(k_2, stat="density")
@@ -46,6 +50,7 @@ plt.show()
 plt.clf()
 
 ```
+
 ### 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!
 
 진짜 모르겠다다
