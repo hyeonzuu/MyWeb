@@ -19,7 +19,7 @@
         "\n",
         "### 패키지 불러오기\n"
       ],
-      "id": "fc2d0afe"
+      "id": "1b186a9e"
     },
     {
       "cell_type": "code",
@@ -30,7 +30,7 @@
         "import seaborn as snss\n",
         "import matplotlib.pyplot as plt\n"
       ],
-      "id": "c202ab09",
+      "id": "00300c70",
       "execution_count": null,
       "outputs": []
     },
@@ -40,7 +40,7 @@
       "source": [
         "### 실습 코드\n"
       ],
-      "id": "fd8b456b"
+      "id": "ad829803"
     },
     {
       "cell_type": "code",
@@ -92,7 +92,7 @@
         "plt.show()\n",
         "plt.clf()"
       ],
-      "id": "9f3b21ae",
+      "id": "9cb3efff",
       "execution_count": null,
       "outputs": []
     },
@@ -102,7 +102,7 @@
       "source": [
         "## 신뢰구간 구하기\n"
       ],
-      "id": "5ae05d74"
+      "id": "613ed478"
     },
     {
       "cell_type": "code",
@@ -115,7 +115,7 @@
         "sex_income['ci_upper'] = sex_income['mean_income'] + 1.96* (sex_income['std_income'] / np.sqrt(sex_income['count_income']))\n",
         "sex_income['ci_upper']"
       ],
-      "id": "7d84c90a",
+      "id": "38b971d2",
       "execution_count": null,
       "outputs": []
     },
@@ -125,7 +125,7 @@
       "source": [
         "### 그래프 그리기\n"
       ],
-      "id": "646bdc99"
+      "id": "b997ef27"
     },
     {
       "cell_type": "code",
@@ -138,7 +138,7 @@
         "plt.show()\n",
         "plt.clf()"
       ],
-      "id": "d81a4068",
+      "id": "1cdaf803",
       "execution_count": null,
       "outputs": []
     }
